@@ -12,9 +12,13 @@
         <link rel="stylesheet" href="styles/master.css">
         <!-- Load styles from index.css -->
         <link rel="stylesheet" href="styles/schdule.css">
+        <!-- Load script from master.js -->
+        <script src="scripts/master.js"></script>
+        <!-- Load script from schedules.js -->
+        <script src="scripts/schedule.js"></script>
     </head>
 
-    <body>
+    <body onload="highlightPage('schedule')">
         <!-- Header -->
         <header>
             <!-- Logo -->
@@ -24,10 +28,10 @@
         </header>
         <!-- Navigation -->
         <nav>
-            <a href="./index.html">Mock</a>
-            <a href="./profile.html">Profile</a>
-            <a href="./schedule.html">Schedule</a>
-            <a href="./interview.html">Interview</a>
+            <a id="index-link" href="./index.html">Mock</a>
+            <a id="profile-link" href="./profile.html">Profile</a>
+            <a id="schedule-link" href="./schedule.html">Schedule</a>
+            <a id="interview-link" href="./interview.html">Interview</a>
         </nav>
         <!-- Profile setup -->
         <div class="schedule">
