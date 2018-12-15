@@ -1,0 +1,17 @@
+.intro {
+}
+.intro-content-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+.intro-content-item {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+.intro-content-header {
+    min-width: 25vw;
+}
+.intro-content-text {
+}
