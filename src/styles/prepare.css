@@ -8,7 +8,10 @@
 
 }
 .accordion-body {
-
+    display: none;
+}
+.accordion .accordion-body .active {
+    display: block;
 }
 #prepare-link {
     border-style: solid;
