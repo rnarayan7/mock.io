@@ -29,10 +29,20 @@
 .intro-content-text {
     margin-right: 0.25vw;
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 767px){
     .intro-content-item {
         display: flex;
         flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+    .intro-content-image {
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 979px){
+    .intro-content-item {
+        display: flex;
+        flex-flow: row nowrap;
         justify-content: space-around;
     }
     .intro-content-image {
