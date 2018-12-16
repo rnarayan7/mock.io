@@ -15,11 +15,31 @@
     margin-bottom: 4vh;
 }
 .intro-content-header {
+    display: flex;
+    flex-flow: row nowrap;
     min-width: 20vw;
     font-size: 4vh;
     margin-right: 1vw;
     margin-left: 0.25vw;
 }
+.intro-content-image {
+    margin-left: 1vw;
+    max-width: 15vh;
+}
 .intro-content-text {
     margin-right: 0.25vw;
+}
+@media screen and (max-width: 600px){
+    .intro-content-item {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+    }
+    .intro-content-image {
+        display: none;
+    }
+}
+#index-link {
+    border-style: solid;
+    border-width: 1.5px;
 }
