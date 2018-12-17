@@ -10,15 +10,6 @@ app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}...`);
 });
 
-// Initialize connection to mySQL database
-/**var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'dbuser',
-  password : 's3kreee7',
-  database : 'my_db'
-});
-connection.connect();*/
-
 // Set the view engine to ejs
 app.set('view engine', 'ejs');
 
@@ -56,20 +47,38 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.post('/login/', function (req, res) {
     var username = req.body.username;
     var password = req.body.password;
-    console.log(username);
-    console.log(password);
     res.json({ username: req.body.username,
                password: req.body.password });
 
 });
 // Define router for requests to register endpoint
-app.post('/register/', function (req, res) {
-    console.log(res);
+app.get('/login', function (req, res) {
+    res.render(res);
+});
+// Define router for requests to register endpoint
+app.post('/register', function (req, res) {
+    res.render(res);
 });
 
-/**connection.query('SELECT 1 + 1 AS solution', function (err, rows, fields) {
-  if (err) throw err
-  console.log('The solution is: ', rows[0].solution)
-})
+// Initialize connection to mySQL database
+/**let connection = mysql.createConnection({
+    host: "35.232.221.94",
+    user: "rnarayan7",
+    password: "Fx3spy123",
+    database: "mock_io_accounts",
+    timeout: 60000
+    //host: process.env.DB_HOST,
+    //user: process.env.DB_USER,
+    //password: process.env.DB_PASSWORD,
+    //database: process.env.DB_NAME
+});
 
-connection.end()*/
+connection.connect(function(err) {
+    if (err) {
+        console.error('Error connecting: ' + err.stack);
+        return;
+    }
+    console.log('Connected as thread id: ' + connection.threadId);
+});
+
+connection.query("INSERT INTO accounts (first_name, last_name, email) VALUES ('sachin', 'narayan', 'cheechunan@yahoo.com');")*/
