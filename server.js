@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql');
 const bodyParser = require('body-parser');
+const path = require('path')
 
 // Listen to the App Engine-specified port, or 8080 otherwise
 const PORT = process.env.PORT || 8080;
@@ -18,8 +19,37 @@ app.listen(PORT, () => {
 });
 connection.connect();*/
 
+// Set the view engine to ejs
+app.set('view engine', 'ejs');
+
+// Set views location to correct path
+app.set('views',path.join(__dirname,'views'));
+
+// Set folder for static files to public
+app.use(express.static(path.join(__dirname,"public")));
+
+// Access index page
+app.get('/', function(req, res) {
+    res.render('pages/index');
+});
+app.get('/index', function(req, res) {
+    res.render('pages/index');
+});
+app.get('/profile', function(req, res) {
+    res.render('pages/profile');
+});
+app.get('/schedule', function(req, res) {
+    res.render('pages/schedule');
+});
+app.get('/interview', function(req, res) {
+    res.render('pages/interview');
+});
+app.get('/prepare', function(req, res) {
+    res.render('pages/prepare');
+});
+
 // Configure express to use static pages
-app.use(express.static('src'));
+// app.use(express.static('src'));
 // Configure bodyParser to accept urlencoded form data
 app.use(bodyParser.urlencoded({ extended: true }));
 // Define router for requests to login endpoint

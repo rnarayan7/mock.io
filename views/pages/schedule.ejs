@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <% include ../partials/head %>
+        <!-- Load styles from schedule.css -->
+        <link rel="stylesheet" href="../styles/schedule.css">
+        <!-- Load script from schedules.js -->
+        <script src="../scripts/schedule.js"></script>
+    </head>
+
+    <body>
+        <!-- Jump to content - for accessibilit -->
+        <a href="#content" class="skip">Skip to content</a>
+        <!-- Header -->
+        <header>
+            <% include ../partials/header %>
+        </header>
+        <!-- Profile setup -->
+        <main id="content" role="main" class="schedule">
+            <div class="image-container">
+                <img class="image-content" src="/images/schedule-one.jpg">
+            </div>
+            <div class="schedule-content">
+                <div role="heading" aria-level="1" class="schedule-header">
+                    Schedule
+                </div>
+                <form action="/schedule/" class="input-form">
+                    <label for="date">Date:</label>
+                    <input id="date" type="date" name="date" required><br>
+
+                    <label for="focus">Focus (software engineering, product management...):</label>
+                    <input id="focus" type="text" name="focus" required><br>
+
+                    <label for="company">Company interviewing for (recommended):</label>
+                    <input id="company" type="text" name="company"><br>
+
+                    <label for="role">Role (recommended):</label>
+                    <input id="role" type="text" name="role"><br>
+
+                    <label for="interview_date">Interview date (recommended):</label>
+                    <input id="interview_date" type="text" name="interview_date"><br>
+
+                    <input type="submit" value="Submit">
+                    <input type="reset">
+                </form>
+            </div>
+            <div class="image-container">
+                <img class="image-content" src="/images/schedule-two.jpg">
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <% include ../partials/footer %>
+        </footer>
+    </body>
+</html>

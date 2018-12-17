@@ -1,0 +1,144 @@
+<!-- index.ejs views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <% include ../partials/head %>
+        <!-- Load script from index.js -->
+        <script src="./scripts/index.js"></script>
+        <!-- Load styles from index.css -->
+        <link rel="stylesheet" type="text/css" href="../styles/index.css">
+    </head>
+
+    <body>
+        <!-- Jump to content - for accessibilit -->
+        <a href="#content" class="skip">Skip to content</a>
+        <!-- Header -->
+        <header>
+            <% include ../partials/header %>
+        </header>
+        <!-- Site/Product Introduction -->
+        <main id="content" role="main" class="intro">
+            <!-- Content -->
+            <div class="intro-content-container">
+                <!-- What is Mock? -->
+                <div class="intro-content-item">
+                    <div role="heading" aria-level="1" class="intro-content-header">
+                        What is mock?
+                    </div>
+                    <div class="intro-content-text">
+                        Mock is a platform by which individuals can connect
+                        with one another for the purpose of conducting mock
+                        interviews. It provides a method by which people who
+                        have already received offers from a specific company,
+                        or even seasoned interviewers can source themselves for
+                        interviews. As a job seeker, it is the perfect tool for
+                        receiving personalized help towards landing one's dream
+                        offer.
+                    </div>
+                </div>
+                <!-- Who is it for? -->
+                <div class="intro-content-item">
+                    <div class="intro-content-header">
+                        Who is it for?
+                    </div>
+                    <div class="intro-content-text">
+                        Mock was initially built to cater to university
+                        students, given that at many schools, students are
+                        unable to find the necessary help to prepare for
+                        specific interviews. As of now, it continues to serve
+                        university students as its primary goal, but the
+                        development team is looking to expand its usage to
+                        other target groups.
+                    </div>
+                </div>
+                <!-- How do you use it? -->
+                <div class="intro-content-item">
+                    <div class="intro-content-header">
+                        How do you use it?
+                    </div>
+                    <div class="intro-content-text">
+                        Mock is a simple application to use, and requires only
+                        a few basic steps. First, register for an account on
+                        the profile page. From then on, only access your
+                        account by logging in. Once having logged in, navigate
+                        to the schedule page. Here, you can state your
+                        preferences for a mock interview, including time, area
+                        of focus, and desired interviewer experience. Finally,
+                        you will be sent to the interview page, which will
+                        allow you to select from multiple interview choices,
+                        such that you can pick the one that works best for you.
+                    </div>
+                </div>
+                <!-- About Roshan Narayan -->
+                <div class="intro-content-item">
+                    <div class="intro-content-header">
+                        Roshan Narayan
+                    </div>
+                    <div class="intro-content-text">
+                        Roshan is an aspiring computer science student pursuing
+                        his bachelor's in CS from the College of Engineering at
+                        the University of Michigan. In addition to his
+                        engineering education, he has taken multiple classes
+                        in the school of information, which helped him grow his
+                        understanding of how technology interacts with
+                        end-users, and how to build software that truly adds
+                        value to people's lives. He has worked for Stryker
+                        Corporation and Capital One, and will be interning at
+                        Salesforce as a software engineering intern in the
+                        summer of 2019. In addition to development, Roshan
+                        enjoys dancing, playing basketball, reading, and is
+                        hoping to become a successful entrepeneur throughout
+                        the course of his career.
+                    </div>
+                    <a href="/images/roshan_headshot.jpg" data-lightbox="intro-content-image">
+                        <img class="intro-content-image" src="/images/roshan_headshot.jpg" alt="Headshot: Roshan Narayan">
+                    </a>
+                </div>
+                <!-- About the University of Michigan -->
+                <div class="intro-content-item">
+                    <div class="intro-content-header">
+                        University of Michigan
+                    </div>
+                    <div class="intro-content-text">
+                        Mock's first home was at the University of Michigan.
+                        While studying there, Roshan identified some of the
+                        shortcomings of the College of Engineering's Career
+                        Resource Center, specifically its inability to provide
+                        personalized interviews for roles in software
+                        engineering. Aiming to build a better system to help
+                        Michigan students, he created Mock and pitched it first
+                        to fellow peers. Some of them were the first ever to
+                        use the platform.
+                    </div>
+                    <a href="/images/michigan_seal.png" data-lightbox="intro-content-image">
+                        <img class="intro-content-image" src="/images/michigan_seal.png" alt="University of Michigan Seal">
+                    </a>
+                </div>
+                <!-- About the UM SI Program -->
+                <div class="intro-content-item">
+                    <div class="intro-content-header">
+                        UM School of Information
+                    </div>
+                    <div class="intro-content-text">
+                        This idea came to reality largely due to the teachings
+                        of two classes in the University of Michigan School of
+                        Information, Succeeding at Failing: The Art of
+                        Entrepeneurship in the Age of Information (SI 360) and
+                        Accessible Web Design (SI 339). Various aspects of the
+                        product design and business model came from a startup
+                        pitch challenge in SI 360 and the design techniques
+                        taught in SI 339 aided in developing the first
+                        iterations of the product.
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer>
+            <% include ../partials/footer %>
+        </footer>
+
+    </body>
+</html>
