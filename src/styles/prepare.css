@@ -1,17 +1,62 @@
+.prepare {
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: 90vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+.prepare-content {
+    margin-left: 3vw;
+    margin-right: 3vw;
+}
 .accordion {
-
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    width: 65vw;
 }
 .accordion-panel {
-
+    display: flex;
+    flex-flow: column nowrap;
 }
 .accordion-header {
-
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+.active, .accordion-header:hover {
+    background-color: #ccc;
 }
 .accordion-body {
+    padding: 0 18px;
+    background-color: white;
     display: none;
+    overflow: hidden;
+    max-width: 65vw;
 }
-.accordion .accordion-body .active {
-    display: block;
+.accordion-item {
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
+}
+.accordion-body.active {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 65vw;
+}
+.image-container {
+    max-width: 30vw;
+    max-height: 70vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+.image-content {
+    max-width: 30vw;
 }
 #prepare-link {
     border-style: solid;
