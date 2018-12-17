@@ -1,6 +1,7 @@
 // Function to create accordion
-function initAccordion(accordionElem){
-    
+function initAccordion(){
+    var accordionElem = $("#accordion")
+
     // Event handler for when button for accordion is selected
     function handlePanelClick(event){
         showPanel(event.currentTarget);
@@ -21,8 +22,7 @@ function initAccordion(accordionElem){
 
     // Assigns click event to all panel elements
     var allPanelElems = $(".accordion-panel");
-    console.log(allPanelElems)
     allPanelElems.on("click",handlePanelClick)
 }
 // Call initialization for accordion
-initAccordion($("#accordion"));
+$(document).ready(initAccordion);
