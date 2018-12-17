@@ -50,13 +50,22 @@
 }
 .image-container {
     max-width: 30vw;
-    max-height: 70vh;
+    max-height: 60vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
 }
 .image-content {
     max-width: 30vw;
+    max-height: 30vh;
+}
+@media screen and (max-width: 979px){
+    .accordion, .accordion-panel {
+        width: 80vw;
+    }
+    .image-container, .image-content {
+        display: none;
+    }
 }
 #prepare-link {
     border-style: solid;
