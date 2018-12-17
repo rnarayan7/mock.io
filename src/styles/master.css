@@ -19,7 +19,7 @@ nav {
     min-height: 4vh;
     margin-left: 2vw;
     margin-right: 2vw;
-    background-color: #E7560A;
+    background-color: #0066ff;
     color: #FFFFFF;
 }
 nav > a {
@@ -33,7 +33,7 @@ footer {
     min-height: 4vh;
     margin-left: 2vw;
     margin-right: 2vw;
-    background-color: #E7560A;
+    background-color: #0066ff;
     color: #FFFFFF;
 }
 footer > a {
