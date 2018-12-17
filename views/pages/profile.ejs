@@ -17,6 +17,27 @@
             <% include ../partials/header %>
         </header>
 
+        <!-- Modal -->
+        <div class="modal-container">
+            <div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="alertModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="alertModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+
         <!-- Profile setup -->
         <main id="content" role="main" class="profile">
             <!-- Login -->
@@ -24,7 +45,7 @@
                 <div role="heading" aria-level="1" class="profile-header">
                     Login
                 </div>
-                <form action="/login" method="GET" class="input-form">
+                <form class="input-form" onsubmit="return validateForm('login')">
                     <label for="username-login">Username:</label>
                     <input id="username-login" type="text" name="username" required><br>
 
@@ -47,13 +68,13 @@
                 <div class="profile-header">
                     Register
                 </div>
-                <form action="/register" method="POST" class="input-form">
+                <form class="input-form" onsubmit="return validateForm('register')">
 
-                    <label for="firstname">First Name:</label>
-                    <input id="firstname" type="text" name="firstname" required><br>
+                    <label for="first_name">First Name:</label>
+                    <input id="first_name" type="text" name="firstname" required><br>
 
-                    <label for="lastname">Last Name:</label>
-                    <input id="lastname" type="text" name="lastname" required><br>
+                    <label for="last_name">Last Name:</label>
+                    <input id="last_name" type="text" name="lastname" required><br>
 
                     <label for="date_of_birth">Date of Birth:</label>
                     <input id="date_of_birth" type="date" name="date_of_birth" required><br>
