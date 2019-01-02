@@ -1,2 +1,2 @@
-# rnarayan7.github.io
+# mock.io
 Mock.io
